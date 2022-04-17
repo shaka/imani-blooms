@@ -43,11 +43,6 @@ const FeaturesTiles = ({
     pushLeft && 'push-left'
   );
 
-  const sectionHeader = {
-    title: 'Build up the whole picture',
-    paragraph: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.'
-  };
-
   return (
     <section
       {...props}
@@ -55,27 +50,28 @@ const FeaturesTiles = ({
     >
       <div className="container">
         <div className={innerClasses}>
-          <SectionHeader data={sectionHeader} className="center-content" />
+          
           <div className={tilesClasses}>
 
             <div className="tiles-item reveal-from-bottom">
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
                   <div className="features-tiles-item-image mb-16">
+                    <a href="/about">
                     <Image
-                      src={require('./../../assets/images/feature-tile-icon-01.svg')}
-                      alt="Features tile icon 01"
-                      width={64}
-                      height={64} />
+                      src={require('./../../assets/images/pinkflower.png')}
+                      alt="Pink Flower"
+                      width={90}
+                      height={90} />
+                      </a>
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
+                <a href="/about">
                   <h4 className="mt-0 mb-8">
-                    Robust Workflow
+                    Meet Imani
                     </h4>
-                  <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
+                    </a>
                 </div>
               </div>
             </div>
@@ -84,20 +80,22 @@ const FeaturesTiles = ({
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
                   <div className="features-tiles-item-image mb-16">
+                  <a href="/farm">
                     <Image
-                      src={require('./../../assets/images/feature-tile-icon-02.svg')}
-                      alt="Features tile icon 02"
-                      width={64}
-                      height={64} />
+                      src={require('./../../assets/images/greenery.png')}
+                      alt="Green"
+                      width={90}
+                      circle
+                      height={90} />
+                      </a>
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
+                <a href="/farm">
                   <h4 className="mt-0 mb-8">
-                    Robust Workflow
+                   Imani Blooms Farm
                     </h4>
-                  <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
+                    </a>
                 </div>
               </div>
             </div>
@@ -106,90 +104,24 @@ const FeaturesTiles = ({
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
                   <div className="features-tiles-item-image mb-16">
+                    <a href="/abolition">
                     <Image
-                      src={require('./../../assets/images/feature-tile-icon-03.svg')}
+                      src={require('./../../assets/images/Photo3.png')}
                       alt="Features tile icon 03"
-                      width={64}
-                      height={64} />
+                      width={90}
+                      height={90} />
+                      </a>
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
+                <a href="/abolition">
                   <h4 className="mt-0 mb-8">
-                    Robust Workflow
+                    Freedom Flowers
                     </h4>
-                  <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
+                    </a>
                 </div>
               </div>
             </div>
-
-            <div className="tiles-item reveal-from-bottom">
-              <div className="tiles-item-inner">
-                <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
-                    <Image
-                      src={require('./../../assets/images/feature-tile-icon-04.svg')}
-                      alt="Features tile icon 04"
-                      width={64}
-                      height={64} />
-                  </div>
-                </div>
-                <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">
-                    Robust Workflow
-                    </h4>
-                  <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="tiles-item reveal-from-bottom" data-reveal-delay="200">
-              <div className="tiles-item-inner">
-                <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
-                    <Image
-                      src={require('./../../assets/images/feature-tile-icon-05.svg')}
-                      alt="Features tile icon 05"
-                      width={64}
-                      height={64} />
-                  </div>
-                </div>
-                <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">
-                    Robust Workflow
-                    </h4>
-                  <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="tiles-item reveal-from-bottom" data-reveal-delay="400">
-              <div className="tiles-item-inner">
-                <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
-                    <Image
-                      src={require('./../../assets/images/feature-tile-icon-06.svg')}
-                      alt="Features tile icon 06"
-                      width={64}
-                      height={64} />
-                  </div>
-                </div>
-                <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">
-                    Robust Workflow
-                    </h4>
-                  <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                    </p>
-                </div>
-              </div>
-            </div>
-
           </div>
         </div>
       </div>

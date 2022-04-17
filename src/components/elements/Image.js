@@ -8,7 +8,8 @@ const propTypes = {
   ]).isRequired,
   width: PropTypes.number,
   height: PropTypes.number,
-  alt: PropTypes.string
+  alt: PropTypes.string,
+  circle: PropTypes.boolean,
 }
 
 const defaultProps = {
@@ -54,7 +55,7 @@ const Image = ({
       placeholder.style.opacity = '0';
       img.className && placeholder.classList.add(img.className);
       placeholder.remove();
-      img.style.display = '';      
+      img.style.display = '';   
     }
   }
 
