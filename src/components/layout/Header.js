@@ -111,7 +111,7 @@ const Header = ({
                       className="list-reset header-nav-right"
                     >
                       <li>
-                        <a href="https://instagram.com">
+                        <a href="https://instagram.com/imaniblooms" target="_blank">
                           <svg
                             width="16"
                             height="16"
