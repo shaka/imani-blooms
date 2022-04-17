@@ -13,7 +13,7 @@ export default function FarmContent() {
         <section
           className={outerClasses}
         >
-            <h1>Imani Blooms Farm</h1>
+            <h3>Imani Blooms Farm</h3>
         <div className="container-sm">
             <br/>
             Imani Blooms Farm, located on the Eastside of Detroit, is a small-scale diversified cut flower operation.

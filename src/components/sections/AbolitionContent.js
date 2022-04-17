@@ -18,7 +18,7 @@ export default function AbolitionContent() {
         <section
             className={outerClasses}
         >
-            <h1>Free Black Mama’s - Abolition Now</h1>
+            <h3>Free Black Mama’s - Abolition Now</h3>
             <p>
                 Roses are Red <br />
     Violets are Blue<br />
