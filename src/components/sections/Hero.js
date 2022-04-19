@@ -72,16 +72,9 @@ const Hero = ({
               Imani Blooms
             </h1>
           </div>
-          <div className="hero-figure reveal-from-bottom illustration-element-01" data-reveal-value="20px" data-reveal-delay="50">
-          <Image
-                className="has-shadow"
-                src={picture}
-                alt="Hero"
-                width={300}
-                height={400} />
-          </div>
           <div className="container-xs" style={{ color: "black", paddingTop: "40px" }}>
-            <p>Imani Blooms - Blooming Black {words[index]}</p>
+            <p>Imani Blooms - Blooming Black</p>
+            <p>{words[index]}</p>
           </div>
         </div>
       </div>
