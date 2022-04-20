@@ -9,7 +9,10 @@ html {
 }
 
 body {
-	background: color-bg(body); /* Fallback for when there is no custom background color defined. */
+	background-image: url('../../../images/minamalbg.jpg');
+	background-repeat: no-repeat, repeat;
+	background-position: center;
+	background-color: #ddffdd;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 }
