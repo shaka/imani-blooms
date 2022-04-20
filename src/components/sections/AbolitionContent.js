@@ -3,10 +3,11 @@ import classNames from 'classnames';
 import Image from '../elements/Image'
 import Select from 'react-select';
 const options = [
-    { value: "18", label: 'Half Dozen (6 Stems)', link: '/#1' },
-    { value: "28", label: 'One Dozen (12 Stems)', link: '/#2' },
-    { value: "25", label: 'Half Dozen (6 Stems) - with delivery', link: '/#1d' },
-    { value: "35", label: 'One Dozen (12 Stems) - with delivery', link: '/#2d' },
+    { value: "$18", label: `1/2 dozen double bloom tulips to support MI Liberations Black Mama's Bail Out`, link: 'https://www.paypal.com/donate/?hosted_button_id=WWRJQDHQLDRDQ' },
+    { value: "$26", label: `1/2 dozen double bloom tulips to support MI Liberations Black Mama's Bail. Plus delivery`, link: 'https://www.paypal.com/donate/?hosted_button_id=Q5SSA86DKPBFS' },
+    { value: "$30", label: `1 dozen double bloom tulips to support MI Liberations Black Mama's Bail`, link: 'https://www.paypal.com/donate/?hosted_button_id=ABN7H8PS83SGW' },
+    { value: "$38", label: `1 dozen double bloom tulips to support MI Liberations Black Mama's Bail. Plus delivery.`, link: 'https://www.paypal.com/donate/?hosted_button_id=AD54DAR2L4826' },
+    { value: "Various Amounts", label: `General Donation`, link: 'https://www.paypal.com/donate/?hosted_button_id=6BKR9R8MKJQ38' },
 ]
 
 export default function AbolitionContent() {
@@ -39,7 +40,8 @@ export default function AbolitionContent() {
                         src={require('./../../../src/assets/images/tulips.png')}
                     />
                     <div class="card" style={{ backgroundColor: "white" }}>
-                        Beautiful long stem double tulips with bight, bold colors
+                        Beautiful long stem double bloom tulips with bright, bold colors
+    <p style={{ fontWeight: '700', fontSize: '1.3em' }}>{selectedOption.value}</p>
                         <Select
                             className="selector"
                             defaultValue={selectedOption}
@@ -47,7 +49,7 @@ export default function AbolitionContent() {
                             options={options}
                             isSearchable
                         />
-                        <p><button onClick={() => { window.open(selectedOption.link, "_blank") }}>Donate via Paypal</button></p>
+                        <p><button onClick={() => { window.open(selectedOption.link, "_blank") }}>Donate via PayPal</button></p>
                     </div>
                 </div>
                 <div className="padding-container" style={{ textAlign: "left" }}>
