@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from 'react';
 import { useLocation, Switch } from 'react-router-dom';
-import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import AppRoute from './utils/AppRoute';
 import ScrollReveal from './utils/ScrollReveal';
 
@@ -26,7 +25,6 @@ const App = () => {
   }, [location]);
 
   return (
-    <PayPalScriptProvider options={{ "client-id": "test" }}>
     <ScrollReveal
       ref={childRef}
       children={() => (
@@ -37,7 +35,6 @@ const App = () => {
           <AppRoute exact path="/abolition" component={Abolition} layout={LayoutDefault} />
         </Switch>
       )} />
-      </PayPalScriptProvider>
   );
 }
 

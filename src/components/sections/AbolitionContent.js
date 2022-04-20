@@ -1,14 +1,16 @@
 import React, { useState } from 'react'
 import classNames from 'classnames';
-import { PayPalButtons } from "@paypal/react-paypal-js";
+import Image from '../elements/Image'
 import Select from 'react-select';
 const options = [
-    { value: "18", label: 'Half Dozen (6 Stems)' },
-    { value: "28", label: 'One Dozen (12 Stems)' },
+    { value: "18", label: 'Half Dozen (6 Stems)', link: '/#1' },
+    { value: "28", label: 'One Dozen (12 Stems)', link: '/#2' },
+    { value: "25", label: 'Half Dozen (6 Stems) - with delivery', link: '/#1d' },
+    { value: "35", label: 'One Dozen (12 Stems) - with delivery', link: '/#2d' },
 ]
 
 export default function AbolitionContent() {
-    const [selectedOption, setSelectedOption] = useState(null);
+    const [selectedOption, setSelectedOption] = useState(options[0]);
     const outerClasses = classNames(
         'hero section center-content about-content',
         'has-top-divider',
@@ -31,82 +33,34 @@ export default function AbolitionContent() {
             Imani Blooms supports abolitionist movements and organizers working to end mass incarceration and pre-trial detention. This year Imani Blooms is donating all proceeds from the Freedom Flower sale to Michigan Liberation’s Black Mama’s Bail Out Fund. Please consider purchasing a tulip bouquet or giving a donation to support Black Mama’s unjustly inprisioned through pre-trial detention.
             <br />
                 <h3>Freedom Flowers</h3>
-                <div className="padding-container">
-                    <p>Beautiful long stem double tulips with bight, bold colors</p>
-                    <Select
-                        defaultValue={selectedOption}
-                        onChange={setSelectedOption}
-                        options={options}
+                <div className="padding-container" style={{ border: "5px solid #dfdfdf" }}>
+                    <Image
+                        width={"75%"}
+                        src={require('./../../../src/assets/images/tulips.png')}
                     />
-                    <br />
-                    {selectedOption && selectedOption.value === "18" &&
-                        <PayPalButtons
-                            onInit={() => console.log("initializing paypal")}
-                            createOrder={(data, actions) => {
-                                return actions.order
-                                    .create({
-                                        purchase_units: [
-                                            {
-                                                description: 'Half Dozen (6 Stems)',
-                                                amount: {
-                                                    currency_code: 'USD',
-                                                    value: 18,
-                                                },
-                                            },
-                                        ],
-                                    })
-                                    .then((orderId) => {
-                                        // Your code here after create the order
-                                        return orderId;
-                                    });
-                            }}
-                            onApprove={function (data, actions) {
-                                return actions.order.capture().then(function () {
-                                    // Your code here after capture the order
-                                });
-                            }}
+                    <div class="card" style={{ backgroundColor: "white" }}>
+                        Beautiful long stem double tulips with bight, bold colors
+                        <Select
+                            className="selector"
+                            defaultValue={selectedOption}
+                            onChange={setSelectedOption}
+                            options={options}
+                            isSearchable
                         />
-                    }
-                    {selectedOption && selectedOption.value === "28" &&
-                        <PayPalButtons
-                            onInit={() => console.log("initializing paypal")}
-                            createOrder={(data, actions) => {
-                                return actions.order
-                                    .create({
-                                        purchase_units: [
-                                            {
-                                                description: 'One Dozen (12 Stems)',
-                                                amount: {
-                                                    currency_code: 'USD',
-                                                    value: 28,
-                                                },
-                                            },
-                                        ],
-                                    })
-                                    .then((orderId) => {
-                                        // Your code here after create the order
-                                        return orderId;
-                                    });
-                            }}
-                            onApprove={function (data, actions) {
-                                return actions.order.capture().then(function () {
-                                    // Your code here after capture the order
-                                });
-                            }}
-                        />
-                    }
+                        <p><button onClick={() => { window.open(selectedOption.link, "_blank") }}>Donate via Paypal</button></p>
+                    </div>
                 </div>
-                <div className="padding-container" style={{ textAlign: "left"}}>
+                <div className="padding-container" style={{ textAlign: "left" }}>
                     <h3>Other Actions</h3>
-                    <p style={{ fontSize: "14px"}}>
-                    In addition to purchasing a bouquet or donating, we invite you to take action to create a world free of the current unjust carceral system, including pre-trial detention.  Pre-trial detention, like every aspect of the carceral system, is rooted in the inhuman system of enslavement of African peoples. 
-Taking Action to End Mass Incraction
+                    <p style={{ fontSize: "14px" }}>
+                        In addition to purchasing a bouquet or donating, we invite you to take action to create a world free of the current unjust carceral system, including pre-trial detention.  Pre-trial detention, like every aspect of the carceral system, is rooted in the inhuman system of enslavement of African peoples.
+                        Taking Action to End Mass Incraction
                     </p>
-                    <ul style={{ fontSize: "14px"}}>
+                    <ul style={{ fontSize: "14px" }}>
                         <li>Support and take action with Abolitionist organizations like: MI Liberation, Black Abolitionist Network, The Marshall Project and <a href="https://abolitionnotes.org/prison-abolition-organizations">many others</a></li>
                         <li>Support efforts to defund the police and reinvest in communities. Organizations to connect with include the Detroit Justice Center</li>
                         <li>Support legislation to</li>
-                        <ul style={{ fontSize: "14px"}}>
+                        <ul style={{ fontSize: "14px" }}>
                             <li>End cash bail </li>
                             <li>Restore federal voting rights automatically to returning citizens</li>
                             <li>End sentence minim­ums</li>
